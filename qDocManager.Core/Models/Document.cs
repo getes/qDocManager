@@ -1,4 +1,4 @@
-﻿using qDocManager.Services.Models;
+﻿using qDocManager.Core.Models;
 
 namespace qDocManager.Models
 {

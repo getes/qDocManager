@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using qDocManager.Core.Models;
 using qDocManager.Models;
 
 namespace qDocManager.Controllers
@@ -22,14 +23,14 @@ namespace qDocManager.Controllers
         }
 
         [HttpGet(Name = "GetCategories")]
-        public IEnumerable<Document> GetCategories()
+        public IEnumerable<Category> GetCategories()
         {
 
             return null;
         }
 
         [HttpGet(Name = "GetTags")]
-        public IEnumerable<Document> GetTags()
+        public IEnumerable<Tag> GetTags()
         {
 
             return null;

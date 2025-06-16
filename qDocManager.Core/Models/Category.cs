@@ -1,5 +1,5 @@
 ﻿// IDocumentService.cs
-namespace qDocManager.Services.Models
+namespace qDocManager.Core.Models
 {
     public class Category
     {

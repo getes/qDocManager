@@ -1,5 +1,5 @@
 using qDocManager.Services.Contracts;
-using qDocManager.Services.Models;
+using qDocManager.Core.Models;
 
 namespace qDocManager.Services.Services
 {
