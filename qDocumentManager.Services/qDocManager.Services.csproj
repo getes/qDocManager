@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\qDocManager.Core\qDocManager.Core.csproj" />
+    <ProjectReference Include="..\qDocManager.Repository\qDocManager.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
