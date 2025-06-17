@@ -6,7 +6,7 @@ namespace qDocManager.Models
     {
         public string Title { get; set; }
 
-        public string[] flags { get; set; }
+        public string[] tags { get; set; }
 
         public Category categories { get; set; }
     }

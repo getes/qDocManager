@@ -10,5 +10,7 @@ namespace qDocManager.Services.Contracts
         Task AddDocumentAsync(Document document);
         Task UpdateDocumentAsync(Document document);
         Task DeleteDocumentAsync(string documentTitle);
+        Task<IEnumerable<Document>> GetDocumentsByCategory(string categoryName);
+        Task<IEnumerable<Document>> GetDocumentsByTag(string tagName);
     }
 }
