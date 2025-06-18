@@ -1,4 +1,3 @@
-// DocumentService.cs
 using qDocManager.Models;
 using qDocManager.Repository.Contracts;
 using qDocManager.Services.Contracts;
@@ -8,6 +7,14 @@ namespace qDocManager.Services.Services
     public class DocumentService : IDocumentService
     {
         private readonly IGenericRepository<Document> _documentRepository;
+
+        //Renaming Documents
+
+        //Sorting by (Date, Category, Tags, extensions, size..)
+
+        //move files
+
+
 
         public DocumentService(IGenericRepository<Document> documentRepository)
         {
