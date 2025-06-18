@@ -7,16 +7,22 @@ namespace qDocManager.Repository.Repositories
     public class DocumentRepository : IGenericRepository<Document>
     {
         // For demonstration, using in-memory storage
-        private readonly List<Document> _documents = new();
+        //private readonly List<Document> _documents = new();
+        private readonly AppDbContext _context;
 
-        public Task<IEnumerable<Document>> GetAllAsync() => Task.FromResult(_documents.AsEnumerable());
+        public DocumentRepository(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public Task<IEnumerable<Document>> GetAllAsync() => Task.FromResult(_context.Documents.AsEnumerable());
 
         public Task<Document?> GetByNameAsync(string documentTitle) =>
-            Task.FromResult(_documents.FirstOrDefault(d => d.Title == documentTitle));
+            Task.FromResult(_context.Documents.FirstOrDefault(d => d.Title == documentTitle));
 
         public Task AddAsync(Document entity)
         {
-            _documents.Add(entity);
+            _context.Documents.Add(entity);
             return Task.CompletedTask;
         }
 
@@ -28,8 +34,8 @@ namespace qDocManager.Repository.Repositories
 
         public Task DeleteAsync(string documentTitle)
         {
-            var doc = _documents.FirstOrDefault(d => d.Title == documentTitle);
-            if (doc != null) _documents.Remove(doc);
+            var doc = _context.Documents.FirstOrDefault(d => d.Title == documentTitle);
+            if (doc != null) _context.Documents.Remove(doc);
             return Task.CompletedTask;
         }
     }
